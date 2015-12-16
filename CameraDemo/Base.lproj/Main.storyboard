@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CameraDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UHe-c5-Y1c">
+                                <rect key="frame" x="20" y="20" width="95" height="30"/>
+                                <state key="normal" title="Open Camera"/>
+                                <connections>
+                                    <action selector="openCamera" destination="BYZ-38-t0r" eventType="touchUpInside" id="995-LS-DKS"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Origin Photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wXB-j6-4eI">
+                                <rect key="frame" x="20" y="58" width="96" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edited Photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5gY-83-Zoe">
+                                <rect key="frame" x="20" y="310" width="98.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xPi-5F-CKa">
+                                <rect key="frame" x="20" y="86" width="286" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="286" id="6H3-NY-CzM"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Ga-Lm-ctW">
+                                <rect key="frame" x="20" y="338.5" width="286" height="253.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="286" id="tBo-o5-9q1"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xPi-5F-CKa" firstAttribute="top" secondItem="wXB-j6-4eI" secondAttribute="bottom" constant="8" symbolic="YES" id="72U-6w-enl"/>
+                            <constraint firstItem="2Ga-Lm-ctW" firstAttribute="height" secondItem="xPi-5F-CKa" secondAttribute="height" id="BhU-uX-oVc"/>
+                            <constraint firstItem="2Ga-Lm-ctW" firstAttribute="top" secondItem="5gY-83-Zoe" secondAttribute="bottom" constant="8" symbolic="YES" id="EM5-Bb-cPb"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="2Ga-Lm-ctW" secondAttribute="leading" id="JkP-na-cTb"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="wXB-j6-4eI" secondAttribute="leading" id="MRN-6C-usN"/>
+                            <constraint firstItem="wXB-j6-4eI" firstAttribute="top" secondItem="UHe-c5-Y1c" secondAttribute="bottom" constant="8" symbolic="YES" id="UVt-ol-QWW"/>
+                            <constraint firstItem="2Ga-Lm-ctW" firstAttribute="width" secondItem="xPi-5F-CKa" secondAttribute="width" id="X4E-EZ-zSU"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2Ga-Lm-ctW" secondAttribute="bottom" constant="8" symbolic="YES" id="ZL0-xN-ajn"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="5gY-83-Zoe" secondAttribute="leading" id="aRN-iy-xqn"/>
+                            <constraint firstItem="UHe-c5-Y1c" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="abU-UR-zUn"/>
+                            <constraint firstItem="5gY-83-Zoe" firstAttribute="top" secondItem="xPi-5F-CKa" secondAttribute="bottom" constant="8" symbolic="YES" id="bDu-Vn-ymc"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="xPi-5F-CKa" secondAttribute="leading" id="d5c-sa-KNM"/>
+                            <constraint firstItem="5gY-83-Zoe" firstAttribute="top" secondItem="xPi-5F-CKa" secondAttribute="bottom" constant="8" symbolic="YES" id="iXs-jX-epD"/>
+                            <constraint firstItem="2Ga-Lm-ctW" firstAttribute="top" secondItem="5gY-83-Zoe" secondAttribute="bottom" constant="8" id="m1n-g1-zFR"/>
+                            <constraint firstItem="5gY-83-Zoe" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="20" id="tJq-Mc-kHG"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="UHe-c5-Y1c" secondAttribute="leading" id="wdk-cO-Eub"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="bDu-Vn-ymc"/>
+                                <exclude reference="BhU-uX-oVc"/>
+                                <exclude reference="X4E-EZ-zSU"/>
+                                <exclude reference="m1n-g1-zFR"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="editImgView" destination="2Ga-Lm-ctW" id="TG7-Kt-OtS"/>
+                        <outlet property="originImgView" destination="xPi-5F-CKa" id="qad-Wn-Vru"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="508" y="254"/>
+        </scene>
+    </scenes>
+</document>
